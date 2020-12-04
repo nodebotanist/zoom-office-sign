@@ -3,9 +3,10 @@ const Router = require('router')
 
 const router = Router()
 
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ hello: 'world'}))
+    console.log(req)
+    res.end(JSON.stringify(req))
 })
 
 const server = http.createServer((req, res) => {
