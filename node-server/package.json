@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nodebotanist/zoom-office-sign/issues"
   },
-  "homepage": "https://github.com/nodebotanist/zoom-office-sign#readme"
+  "homepage": "https://github.com/nodebotanist/zoom-office-sign#readme",
+  "dependencies": {
+    "router": "^1.3.5"
+  }
 }
