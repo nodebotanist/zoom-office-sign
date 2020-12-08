@@ -4,9 +4,16 @@ const Router = require('router')
 const router = Router()
 
 router.post('/', (req, res) => {
-    res.setHeader('Content-Type', 'application/json')
-    console.log(req)
-    res.end(JSON.stringify(req))
+    let body = ""
+    req.on('data', (chonk) => {
+        body += chonk
+    })
+    req.on('end', () => {
+        body = JSON.parse(body)
+        console.log(body)
+        res.setHeader('Content-Type', 'application/json')
+        res.end(JSON.stringify(body))
+    })
 })
 
 const server = http.createServer((req, res) => {
