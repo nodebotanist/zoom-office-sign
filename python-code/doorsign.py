@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from inky.inky_uc8159 import Inky
+from font_source_sans_pro import SourceSansProSemiBold
 
 inky = Inky()
 
