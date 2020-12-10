@@ -10,7 +10,15 @@ router.post('/', (req, res) => {
     })
     req.on('end', () => {
         body = JSON.parse(body)
-        console.log(body)
+        let status = body.payload.object.presence_status
+        console.log(status)
+        if(status === 'Do_Not_Disturb') {
+
+        } else if (status === 'Available') {
+
+        } else {
+            
+        }
         res.setHeader('Content-Type', 'application/json')
         res.end(JSON.stringify(body))
     })
