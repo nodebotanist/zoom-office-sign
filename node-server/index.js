@@ -16,6 +16,10 @@ router.post('/', (req, res) => {
     })
 })
 
+router.get('/', (req, res) => {
+    res.end('Welcome to the door sign!')
+})
+
 const server = http.createServer((req, res) => {
     router(req, res, (req, res) => {})
 })
