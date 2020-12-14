@@ -20,9 +20,9 @@ font = ImageFont.truetype(SourceSerifProSemibold, 12)
 
 bg_color = inky.GREEN
 
-if(args.status === "dnd")
+if(args.status == "dnd")
     bg_color = inky.RED
-else if (args.status === "streaming")
+else if (args.status == "streaming")
     bg_color = inky.PURPLE
 
 draw.rectangle([0,0,inky.width,inky.height], fill=bg_color)
