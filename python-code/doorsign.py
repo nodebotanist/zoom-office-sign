@@ -18,7 +18,14 @@ draw = ImageDraw.Draw(img)
 
 font = ImageFont.truetype(SourceSerifProSemibold, 12)
 
-draw.rectangle([0,0,inky.width,inky.height], fill=inky.RED)
+bg_color = inky.GREEN
+
+if(args.status === "dnd")
+    bg_color = inky.RED
+else if (args.status === "streaming")
+    bg_color = inky.PURPLE
+
+draw.rectangle([0,0,inky.width,inky.height], fill=bg_color)
 
 draw.multiline_text((0, 0), "Hello World!", fill=inky.WHITE, font=font, align="left")
 
