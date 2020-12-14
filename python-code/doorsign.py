@@ -7,7 +7,7 @@ from font_source_serif_pro import SourceSerifProSemibold
 from font_source_sans_pro import SourceSansProSemibold
 
 parser = argparse.ArgumentParser()
-parser.addArgument("status", help="Status of the user ['available', 'dnd', 'streaming'")
+parser.add_asrgument("status", help="Status of the user ['available', 'dnd', 'streaming'")
 args = parser.parse_args()
 print(args.status)
 
