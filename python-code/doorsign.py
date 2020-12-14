@@ -7,18 +7,12 @@ from font_source_sans_pro import SourceSansProSemibold
 
 inky = Inky()
 
-for y in range(inky.height - 1):
-    color = y // (inky.height // 7)
-    for x in range(inky.width - 1):
-        inky.set_pixel(x, y, color)
-
-# Create a new canvas to draw on
-
 img = Image.new("P", (inky.width, inky.height))
 draw = ImageDraw.Draw(img)
 
 font = ImageFont.truetype(SourceSerifProSemibold, 12)
 
-draw.multiline_text((0, 0), "Hello World!", fill=inky.White, font=font, align="left")
+draw.multiline_text((0, 0), "Hello World!", fill=inky.WHITE, font=font, align="left")
 
+inky.set_image(img)
 inky.show()
