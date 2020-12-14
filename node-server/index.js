@@ -1,4 +1,5 @@
 const http = require('http')
+const {spawn} = require('child_process')
 const Router = require('router')
 
 const router = Router()
@@ -13,11 +14,11 @@ router.post('/', (req, res) => {
         let status = body.payload.object.presence_status
         console.log(status)
         if(status === 'Do_Not_Disturb') {
-
+            spawn('python3', ['/home/pi/zoom-office-sign/python-code/doorsign.py', 'dnd'])
         } else if (status === 'Available') {
-
+            spawn('python3', ['/home/pi/zoom-office-sign/python-code/doorsign.py', 'available'])
         } else {
-            
+            spawn('python3', ['/home/pi/zoom-office-sign/python-code/doorsign.py', 'streaming'])
         }
         res.setHeader('Content-Type', 'application/json')
         res.end(JSON.stringify(body))
