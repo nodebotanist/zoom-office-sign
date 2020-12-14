@@ -18,6 +18,8 @@ draw = ImageDraw.Draw(img)
 
 font = ImageFont.truetype(SourceSerifProSemibold, 12)
 
+draw.rectangle([0,0,inky.width,inky.height], fill=inky.RED)
+
 draw.multiline_text((0, 0), "Hello World!", fill=inky.WHITE, font=font, align="left")
 
 inky.set_image(img)
