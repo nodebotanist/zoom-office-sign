@@ -31,7 +31,7 @@ elif args.status == "streaming":
 draw.rectangle([0,0,inky.width,inky.height], fill=bg_color)
 draw.rectangle([100,100,inky.width-100,inky.height-100], fill=inky.WHITE)
 
-draw.multiline_text((150, inky.height/2), "Hello World!", fill=inky.BLACK, font=font, align="left")
+draw.multiline_text((150, inky.height/2 - 100), status_text, fill=inky.BLACK, font=font, align="left")
 
 inky.set_image(img)
 inky.show()
