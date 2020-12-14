@@ -19,6 +19,6 @@ draw = ImageDraw.Draw(img)
 
 font = ImageFont.truetype(SourceSerifProSemibold, 12)
 
-draw.multiline_text((0, 0), "Hello World!", fill=inky_display.White, font=font, align="left")
+draw.multiline_text((0, 0), "Hello World!", fill=inky.White, font=font, align="left")
 
 inky.show()
