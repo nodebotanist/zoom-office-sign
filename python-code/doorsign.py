@@ -16,18 +16,22 @@ inky = Inky()
 img = Image.new("P", (inky.width, inky.height))
 draw = ImageDraw.Draw(img)
 
-font = ImageFont.truetype(SourceSerifProSemibold, 12)
+font = ImageFont.truetype(SourceSerifProSemibold, 36)
 
 bg_color = inky.GREEN
+status_text = "Kassian is Available."
 
 if args.status == "dnd":
     bg_color = inky.RED
+    status_text = "Kassian is Busy."
 elif args.status == "streaming":
     bg_color = inky.BLUE
+    status_text = "Kassian is Streaming."
 
 draw.rectangle([0,0,inky.width,inky.height], fill=bg_color)
+draw.rectangle([100,100,inky.width-100,inky.height-100], fill=inky.WHITE)
 
-draw.multiline_text((0, 0), "Hello World!", fill=inky.WHITE, font=font, align="left")
+draw.multiline_text((150, inky.height/2), "Hello World!", fill=inky.BLACK, font=font, align="left")
 
 inky.set_image(img)
 inky.show()
