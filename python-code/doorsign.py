@@ -17,8 +17,8 @@ for y in range(inky.height - 1):
 img = Image.new("P", (inky.width, inky.height))
 draw = ImageDraw.Draw(img)
 
-font = ImageFont.truetype(SourceSerifProSemibold, font_size)
+font = ImageFont.truetype(SourceSerifProSemibold, 12)
 
-draw.multiline_text((0, 0), "Hello World!", fill=inky_display.WHITE, font=font, align="left")
+draw.multiline_text((0, 0), "Hello World!", fill=inky_display.White, font=font, align="left")
 
 inky.show()
