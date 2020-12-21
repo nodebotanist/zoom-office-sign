@@ -29,9 +29,9 @@ elif args.status == "streaming":
     status_text = "Kassian is Streaming."
 
 draw.rectangle([0,0,inky.width,inky.height], fill=bg_color)
-draw.rectangle([100,100,inky.width-100,inky.height-100], fill=inky.WHITE)
+draw.rectangle([50,50,inky.width-50,inky.height-50], fill=inky.WHITE)
 
-draw.multiline_text((150, inky.height/2 - 100), status_text, fill=inky.BLACK, font=font, align="left")
+draw.multiline_text((75, inky.height/2), status_text, fill=inky.BLACK, font=font, align="center")
 
 inky.set_image(img)
 inky.show()
