@@ -31,7 +31,7 @@ elif args.status == "streaming":
 draw.rectangle([0,0,inky.width,inky.height], fill=bg_color)
 draw.rectangle([50,50,inky.width-50,inky.height-50], fill=inky.WHITE)
 
-textLength = draw.textLength(status_text, font=font)
+textLength, textHeight = font.getsize(status_text)
 print(textLength)
 
 draw.multiline_text((75, inky.height/2), status_text, fill=inky.BLACK, font=font, align="center")
